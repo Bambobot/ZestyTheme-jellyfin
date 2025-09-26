@@ -3238,13 +3238,23 @@
     padding: 0.75em 1.6em;
     font-size: 90%;
     border-radius: var(--rounding);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
   }
   .layout-mobile .skip-button {
     bottom: 28%;
     right: 2%;
   }
   .skip-button:hover {
-	  background-color: rgba(var(--accent));
+          background-color: rgba(var(--accent));
+  }
+
+  .layout-tv .skip-button::before {
+    content: "skip_next";
+    font-family: 'Material Icons';
+    font-size: 1.4em;
+    line-height: 1;
   }
 
   /* Support for Jellyscrub plugin */
@@ -3925,17 +3935,26 @@
 }
 
 .layout-tv #castContent .card.overflowPortraitCard {
-	font-size: 100% !important;
-	width: 17.3em !important;
-	margin-left: 0vw !important;
-	height: 37vh;
+        font-size: 95% !important;
+        width: 13.5em !important;
+        margin-left: 0vw !important;
+        max-height: 30vh;
+        aspect-ratio: 2 / 3;
+        height: auto;
 }
 
 .layout-tv #guestCastContent .card.overflowPortraitCard {
-	font-size: 100% !important;
-	width: 17.3em !important;
-	margin-left: 0vw !important;
-	height: 37vh;
+        font-size: 95% !important;
+        width: 13.5em !important;
+        margin-left: 0vw !important;
+        max-height: 30vh;
+        aspect-ratio: 2 / 3;
+        height: auto;
+}
+
+.layout-tv #castContent .card.overflowPortraitCard .cardImageContainer,
+.layout-tv #guestCastContent .card.overflowPortraitCard .cardImageContainer {
+        height: 100%;
 }
 
 .layout-tv .card.show-focus:not(.show-animation) .cardBox.visualCardBox, .layout-tv .card.show-focus:not(.show-animation) .cardBox:not(.visualCardBox) .cardScalable {
@@ -3944,16 +3963,18 @@
 }
 
 .layout-tv .indicator {
-	height: 2.3em;
-	width: 2.3em;
-	top: -10px;
-	position: relative;
+        height: 1.75em;
+        width: 1.75em;
+        top: -6px;
+        position: relative;
 }
 
 .layout-tv .countIndicator, .layout-tv .playedIndicator {
-	font-size: 130%;
-	border-radius: 0px 0px 0px 48px !important;
-	box-shadow: -1px 1px 17px 1px rgba(var(--darkest),.75);
+        font-size: 95%;
+        padding: 0.25em 0.8em;
+        border-radius: 0px 0px 0px 28px !important;
+        box-shadow: -1px 1px 12px 0 rgba(var(--darkest),.65);
+        line-height: 1.2;
 }
 
 
