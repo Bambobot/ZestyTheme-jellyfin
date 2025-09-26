@@ -144,6 +144,13 @@
   .selectAudioContainer, .selectSubtitlesContainer{
     position: absolute;
   }
+  .layout-tv .trackSelections > *:nth-child(n+3) {
+    visibility: visible;
+  }
+  .layout-tv .selectAudioContainer,
+  .layout-tv .selectSubtitlesContainer {
+    position: static;
+  }
   .trackSelections .emby-select {
 	  width: 386px;
 	  overflow: hidden;
@@ -3218,12 +3225,19 @@
 
   /* -# Intro Skipper #-*/
   .skip-button {
-	  background-color: rgba(var(--white));
-	  color: rgba(var(--darkest));
-	  border-radius: calc(var(--rounding) + 5px);
-	  padding: 15px 26px;
-	  bottom: 20%;
-	  right: 8%;
+          background-color: rgba(var(--white));
+          color: rgba(var(--darkest));
+          border-radius: calc(var(--rounding) + 5px);
+          padding: 15px 26px;
+          bottom: 20%;
+          right: 8%;
+  }
+  .layout-tv .skip-button {
+    bottom: 12%;
+    right: 5%;
+    padding: 0.75em 1.6em;
+    font-size: 90%;
+    border-radius: var(--rounding);
   }
   .layout-mobile .skip-button {
     bottom: 28%;
@@ -3801,15 +3815,15 @@
   }
   
 .layout-tv {
-	font-size: 190% !important;
+        font-size: 150% !important;
 }
 
 .layout-tv .card:focus .cardBox.visualCardBox, .layout-tv .card:focus .cardBox:not(.visualCardBox) .cardScalable {
-	border-color: rgba(var(--accent),.75) !important;
-	border-radius: 50px !important;
-	background-color: rgba(var(--accent),0.75);
-	box-shadow: 2px 3px 16px rgba(var(--accent),0.45);
-	backdrop-filter: blur(5px);
+        border-color: rgba(var(--accent),.6) !important;
+        border-radius: 28px !important;
+        background-color: rgba(var(--accent),0.45);
+        box-shadow: 1px 2px 12px rgba(var(--accent),0.35);
+        backdrop-filter: blur(4px);
 }
 
 .layout-tv .missingIndicator, .layout-tv .unairedIndicator, .layout-tv .detailTable, .layout-tv .primaryImageWrapper > img, .layout-tv .toast, .layout-tv .cardContent, .layout-tv .sessionNowPlayingInnerContent, .layout-tv .listItem, .layout-tv .listItem:hover, .layout-tv .cardImage, .layout-tv .fab, .layout-tv .raised, .layout-tv .itemSelectionPanel, .layout-tv .cardContent-button, .layout-tv .cardContent-shadow, .layout-tv .itemDetailImage, .layout-tv .cardImageContainer, .layout-tv .cardPadder, .layout-tv .listItemImage, .layout-tv .listItemButton, .layout-tv .headerButton, .layout-tv .innerCardFooter, .layout-tv .blurhash-canvas, .layout-tv .dialog, .layout-tv .countIndicator, .layout-tv .playedIndicator, .layout-tv .listItemIcon, .layout-tv .listItem-border, .layout-tv .button-flat, .layout-tv .visualCardBox, .layout-tv .emby-select-withcolor, .layout-tv .chapterThumbTextContainer, .layout-tv .chapterThumbContainer, .layout-tv .chapterThumb, .layout-tv .emby-input, .layout-tv .emby-textarea, .layout-tv .emby-select-withcolor, .layout-tv .nowPlayingPageImage, .layout-tv .upNextDialog-poster-img, .layout-tv .upNextContainer {
@@ -3925,8 +3939,8 @@
 }
 
 .layout-tv .card.show-focus:not(.show-animation) .cardBox.visualCardBox, .layout-tv .card.show-focus:not(.show-animation) .cardBox:not(.visualCardBox) .cardScalable {
-	border: 0.8em solid transparent;
-	border-radius: 72px !important;
+        border: 0.25em solid transparent;
+        border-radius: 30px !important;
 }
 
 .layout-tv .indicator {
